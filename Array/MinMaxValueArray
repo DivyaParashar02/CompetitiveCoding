@@ -1,0 +1,24 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG {
+    public static Map<String,Integer> minMaxValues(int[] arr,int length){
+        Arrays.sort(arr);
+        Map<String,Integer> map=new HashMap<String,Integer>();
+        int minValue=arr[0];
+        int maxValue=arr[length-1];
+        map.put("minValue",minValue);
+        map.put("maxValue",maxValue);
+        return map;
+        
+    }
+	public static void main (String[] args) {
+		System.out.println("GfG!");
+		int[] arr={10,40,15,90,9,100};
+	    Map<String,Integer> minMaxMap=minMaxValues(arr,arr.length);
+	    System.out.println(minMaxMap.get("minValue"));
+	    System.out.println(minMaxMap.get("maxValue"));
+	}
+}
